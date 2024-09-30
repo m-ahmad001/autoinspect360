@@ -43,7 +43,7 @@ function auto_add_package_to_cart()
     // Only add the product to the cart if it's not already in the cart
     if (is_checkout() && !is_wc_endpoint_url('order-received')) {
         // Define the product ID or variation ID of the package you want to add
-        $product_id = 14; // Replace with your product/package ID
+        $product_id = 13; // Replace with your product/package ID
 
         // Check if the product is already in the cart
         $found = false;
