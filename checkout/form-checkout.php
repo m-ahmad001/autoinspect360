@@ -74,3 +74,26 @@ if (!$checkout->is_registration_enabled() && $checkout->is_registration_required
 </form>
 
 <?php do_action('woocommerce_after_checkout_form', $checkout); ?>
+
+<style>
+	.woocommerce form .form-row input.input-text,
+	.woocommerce form .form-row textarea {
+		border: 1px solid #ddd;
+		padding: 8px;
+		border-radius: 4px;
+	}
+	.woocommerce form .form-row {
+		margin-bottom: 15px;
+	}
+	.select2-container--default .select2-selection--single {
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		height: 40px;
+	}
+	.select2-container--default .select2-selection--single .select2-selection__rendered {
+		line-height: 40px;
+	}
+	.select2-container--default .select2-selection--single .select2-selection__arrow {
+		height: 38px;
+	}
+</style>

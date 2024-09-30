@@ -101,35 +101,6 @@ function vin_request_page_html()
     include_once 'admin-vin-page.php'; // Include separate file for form and table
 }
 
-// Add this new function to handle the AJAX request
-function process_vin_api_response()
-{
-    if (!isset($_POST['vin']) || !isset($_POST['api_response'])) {
-        wp_send_json_error('Invalid request');
-    }
-
-    $vin = sanitize_text_field($_POST['vin']);
-    $api_response = $_POST['api_response'];
-
-    // Save the HTML content to a file and get the URL
-    $upload_dir = wp_upload_dir();
-    $file_name = 'vin_report_' . $vin . '.html';
-    $file_path = $upload_dir['path'] . '/' . $file_name;
-    $file_url = $upload_dir['url'] . '/' . $file_name;
-
-    if (file_put_contents($file_path, $api_response)) {
-        // Save the VIN request to the database
-        save_vin_request($vin, $file_url);
-        wp_send_json_success('VIN report successfully retrieved and saved.');
-    } else {
-        wp_send_json_error('Unable to save the VIN report.');
-    }
-}
-add_action('wp_ajax_process_vin_api_response', 'process_vin_api_response');
-add_action('wp_ajax_nopriv_process_vin_api_response', 'process_vin_api_response');
-
-
-
 // Keep the save_vin_request function as it is
 function save_vin_request($vin, $pdf_url)
 {
@@ -162,13 +133,4 @@ function create_vin_requests_table()
 }
 register_activation_hook(__FILE__, 'create_vin_requests_table');
 
-function extract_report_url($api_response)
-{
-    // Extract the report URL from the API response
-    // Modify this function based on the actual structure of your API response
-    if (isset($api_response['report_url'])) {
-        return $api_response['report_url'];
-    }
-    return false;
-}
 

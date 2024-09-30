@@ -11,7 +11,7 @@
  
 </head>
 
-<body class="antialiased bg-body text-body font-body">
+<body class="antialiased bg-body text-body font-body max-w-screen mx-auto">
   <div class="">
 
     <?php get_header(); ?>
@@ -67,12 +67,12 @@
 
 
       <!-- Button to scroll to the top -->
-      <button class="block mt-10 lg:mt-20 mx-auto w-16 h-16 p-5 rounded-full bg-indigo-50 hover:bg-indigo-100">
+      <!-- <button class="block mt-10 lg:mt-20 mx-auto w-16 h-16 p-5 rounded-full bg-indigo-50 hover:bg-indigo-100">
         <svg class="mx-auto text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24"
           stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
         </svg>
-      </button>
+      </button> -->
     </div>
 
     <section class="py-20">
@@ -177,36 +177,38 @@
         <div class="flex flex-wrap -mx-4">
           <div class="w-full lg:w-1/2 px-4">
             <div class="max-w-lg lg:mx-auto mb-10 lg:mb-0">
-              <span class="text-xs font-semibold text-indigo-500 uppercase">Lorem ipsum</span>
+              <span class="text-xs font-semibold text-indigo-500 uppercase">
+               How to run VIN check
+              </span>
               <h2
                 class="mt-2 mb-4 text-3xl leading-tight md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight font-bold font-heading">
                 How Do I Run a Free VIN Check?</h2>
-              <p class="mb-8 text-base leading-relaxed lg:text-xl lg:leading-relaxed text-gray-500">Lorem ipsum dolor
+              <!-- <p class="mb-8 text-base leading-relaxed lg:text-xl lg:leading-relaxed text-gray-500">Lorem ipsum dolor
                 sit amet, consectetur adipiscing elit. Pellentesque massa nibh, pulvinar vitae aliquet nec, accumsan
-                aliquet orci.</p>
-              <a class="inline-block px-5 py-3 md:mr-3 mb-3 md:mb-0 text-sm bg-indigo-500 hover:bg-indigo-600 text-white font-semibold border border-indigo-500 hover:border-indigo-600 rounded transition duration-200"
-                href="#">Action</a>
+                aliquet orci.</p> -->
+              <!-- <a class="inline-block px-5 py-3 md:mr-3 mb-3 md:mb-0 text-sm bg-indigo-500 hover:bg-indigo-600 text-white font-semibold border border-indigo-500 hover:border-indigo-600 rounded transition duration-200"
+                href="#">Action</a> -->
             </div>
           </div>
           <div class="w-full lg:w-1/2 px-4">
             <div class="flex flex-wrap px-2 py-6 md:px-8 md:py-12 bg-gray-50 rounded-lg">
               <div class="w-full md:w-1/2 lg:w-full flex items-start flex-col lg:flex-row px-4 mb-8 lg:mb-6">
                 <span
-                  class="mr-10 mb-4 lg:mb-0 flex-shrink-0 flex justify-center items-center w-12 h-12 rounded-full bg-indigo-500 text-indigo-50 font-bold font-heading">1</span>
+                  class="mr-10 mb-4 lg:mb-0 flex-shrink-0 flex justify-center items-center w-12 h-12 rounded-full bg-indigo-500 text-white font-bold font-heading">1</span>
                 <div class="max-w-xs">
                   <p class="text-lg text-gray-500 leading-loose font-sans">Look for the VIN</p>
                 </div>
               </div>
               <div class="w-full md:w-1/2 lg:w-full flex items-start flex-col lg:flex-row px-4 mb-8 lg:mb-6">
                 <span
-                  class="mr-10 mb-4 lg:mb-0 flex-shrink-0 flex justify-center items-center w-12 h-12 rounded-full bg-indigo-500 text-indigo-50 font-bold font-heading">2</span>
+                  class="mr-10 mb-4 lg:mb-0 flex-shrink-0 flex justify-center items-center w-12 h-12 rounded-full bg-indigo-500 text-white font-bold font-heading">2</span>
                 <div class="max-w-xs">
                   <p class="text-lg text-gray-500 leading-loose">Start the VIN search</p>
                 </div>
               </div>
               <div class="w-full md:w-1/2 lg:w-full flex items-start flex-col lg:flex-row px-4">
                 <span
-                  class="mr-10 mb-4 lg:mb-0 flex-shrink-0 flex justify-center items-center w-12 h-12 rounded-full bg-indigo-500 text-indigo-50 font-bold font-heading">3</span>
+                  class="mr-10 mb-4 lg:mb-0 flex-shrink-0 flex justify-center items-center w-12 h-12 rounded-full bg-indigo-500 text-white font-bold font-heading">3</span>
                 <div class="max-w-xs">
                   <p class="text-lg text-gray-500 leading-loose">Get the Vehicle History Report</p>
                 </div>
@@ -275,7 +277,9 @@
     <section class="py-20">
       <div class="container px-4 mx-auto">
         <div class="max-w-3xl mx-auto mb-12 lg:mb-16 text-center">
-          <span class="text-sm text-indigo-500 font-bold uppercase">Lorem ipsum</span>
+            <span class="text-sm text-indigo-500 font-bold uppercase">
+              Customer Testimonials
+            </span>
           <h2
             class="mt-2 mb-4 text-3xl leading-tight md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight font-bold font-heading">
             Customer Testimonials</h2>
@@ -328,19 +332,19 @@
           <div class="w-full lg:w-1/5 mb-6 lg:mb-0">
             <a class="text-gray-600 text-2xl leading-none" href="#">
               <img class="h-8"
-                src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/logos/plain-indigo.svg" alt=""
+                src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/logos/360Logo.svg" alt=""
                 width="auto">
             </a>
           </div>
           <div class="w-full lg:w-auto">
             <ul class="flex flex-wrap items-center">
-              <li class="mb-4 md:mb-0 mx-4"><a class="text-sm hover:text-indigo-700 font-medium" href="#">About</a></li>
-              <li class="mb-4 md:mb-0 mx-4"><a class="text-sm hover:text-indigo-700 font-medium" href="#">Company</a>
+              <!-- <li class="mb-4 md:mb-0 mx-4"><a class="text-sm hover:text-indigo-700 font-medium" href="#">About</a></li> -->
+              <!-- <li class="mb-4 md:mb-0 mx-4"><a class="text-sm hover:text-indigo-700 font-medium" href="#">Company</a>
               </li>
               <li class="mb-4 md:mb-0 mx-4"><a class="text-sm hover:text-indigo-700 font-medium" href="#">Services</a>
               </li>
               <li class="mb-4 md:mb-0 mx-4"><a class="text-sm hover:text-indigo-700 font-medium"
-                  href="#">Testimonials</a></li>
+                  href="#">Testimonials</a></li> -->
             </ul>
           </div>
         </div>
@@ -349,7 +353,7 @@
       <div class="container px-4 mx-auto">
         <div class="flex flex-wrap justify-between items-center">
           <p class="w-full lg:w-auto mt-4 lg:mt-0 order-last lg:order-first text-sm text-gray-500">All rights reserved.
-            © Plain Inc.</p>
+            © 360AutoInspect.</p>
           <div class="order-first lg:order-last">
             <a class="inline-block mr-8" href="#">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/socials/facebook.svg" alt="">

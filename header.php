@@ -27,14 +27,11 @@
                         </svg>
                     </button>
                 </div>
-                <ul class="hidden lg:flex ml-auto mr-10 items-center w-auto space-x-12">
-                    <li><a class="text-sm hover:text-indigo-700 font-medium" href="#">About</a></li>
-                    <li><a class="text-sm hover:text-indigo-700 font-medium" href="#">Company</a></li>
-                    <li><a class="text-sm hover:text-indigo-700 font-medium" href="#">Services</a></li>
-                    <li><a class="text-sm hover:text-indigo-700 font-medium" href="#">Testimonials</a></li>
-                </ul>
+                <!-- <ul class="hidden lg:flex ml-auto mr-10 items-center w-auto space-x-12">
+                    <li><a class="text-sm hover:text-indigo-700 font-medium" href="#">About Us</a></li>
+                </ul> -->
                 <a class="hidden lg:block px-5 py-3 text-sm font-semibold text-indigo-500 hover:text-white hover:bg-indigo-500 border border-indigo-500 hover:border-indigo-600 rounded transition duration-200"
-                    href="#">Contact Us</a>
+                    href="https://autoinspect360.com/contact-us">Contact Us</a>
             </nav>
 
             <div :class="{'block': mobileNavOpen, 'hidden': !mobileNavOpen}"
@@ -56,25 +53,16 @@
                         </button>
                     </div>
                     <ul>
-                        <li class="mb-1"><a
+                        <!-- <li class="mb-1"><a
                                 class="block p-4 text-sm font-semibold hover:bg-indigo-50 hover:text-indigo-500 rounded"
-                                href="#">About</a></li>
-                        <li class="mb-1"><a
-                                class="block p-4 text-sm font-semibold hover:bg-indigo-50 hover:text-indigo-500 rounded"
-                                href="#">Company</a></li>
-                        <li class="mb-1"><a
-                                class="block p-4 text-sm font-semibold hover:bg-indigo-50 hover:text-indigo-500 rounded"
-                                href="#">Services</a></li>
-                        <li class="mb-1"><a
-                                class="block p-4 text-sm font-semibold hover:bg-indigo-50 hover:text-indigo-500 rounded"
-                                href="#">Testimonials</a></li>
+                                href="#">About Us</a></li> -->
                     </ul>
                     <div class="mt-auto pt-6">
                         <a class="block px-5 py-3 text-sm text-center font-semibold text-indigo-500 hover:text-white hover:bg-indigo-500 border border-indigo-500 hover:border-indigo-600 rounded transition duration-200"
-                            href="#">Contact Us</a>
+                            href="https://autoinspect360.com/contact-us">Contact Us</a>
                     </div>
                     <p class="mt-6 mb-4 text-sm text-center text-gray-500">
-                        <span>© 2022 All rights reserved.</span>
+                        <span>© 2024 AutoInspect360.</span>
                     </p>
                 </nav>
             </div>
