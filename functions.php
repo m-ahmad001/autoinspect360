@@ -133,4 +133,39 @@ function create_vin_requests_table()
 }
 register_activation_hook(__FILE__, 'create_vin_requests_table');
 
+add_action('template_redirect', 'handle_vin_package_selection');
+
+function handle_vin_package_selection() {
+    if (is_checkout() && isset($_GET['vin']) && isset($_GET['package'])) {
+        $vin = sanitize_text_field($_GET['vin']);
+        $package = sanitize_text_field($_GET['package']);
+
+        // Map packages to product IDs (you'll need to replace these with your actual product IDs)
+        $package_products = [
+            'basic' => 123,
+            'standard' => 124,
+            'premium' => 125
+        ];
+
+        if (isset($package_products[$package])) {
+            WC()->cart->empty_cart();
+            WC()->cart->add_to_cart($package_products[$package]);
+            
+            // Store VIN as order meta
+            WC()->session->set('vin_number', $vin);
+        }
+    }
+}
+
+// Add VIN to order meta when checkout is processed
+add_action('woocommerce_checkout_create_order', 'add_vin_to_order_meta');
+
+function add_vin_to_order_meta($order) {
+    $vin = WC()->session->get('vin_number');
+    if ($vin) {
+        $order->update_meta_data('vin_number', $vin);
+        WC()->session->__unset('vin_number');
+    }
+}
+
 

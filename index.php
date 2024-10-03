@@ -44,14 +44,14 @@
                   class="flex-grow p-3 border border-gray-400 rounded-md sm:rounded-r-none focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-2 sm:mb-0" />
                 <button id="check-vin-btn"
                   class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-4 py-3 rounded-md sm:rounded-l-none text-sm sm:text-base">
-                  <span class="hidden sm:inline">Check VIN - </span>$19.99
+                  <span class="hidden sm:inline">Check VIN</span>
                 </button>
               </div>
               <div class="flex justify-between mt-4 text-sm text-gray-400">
                 <a href="#" class="text-indigo-500 hover:underline">Where to find the VIN?</a>
                 <div>
                   <span class="text-gray-500">No VIN?</span>
-                  <a href="#" class="text-indigo-500 hover:underline ml-1">Get AutoInspect360 reports</a>
+                  <a href="https://autoinspect360.com/wp-content/uploads/2024/09/vin_report_5YJ3E1EA7LF800340.pdf" target="_blank" class="text-indigo-500 hover:underline ml-1">Get AutoInspect360 reports</a>
                 </div>
               </div>
             </div>
@@ -377,20 +377,36 @@
   </div>
 
 
+  <!-- Add this modal HTML at the end of your body tag -->
+  <div id="package-modal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden">
+    <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+      <h3 class="text-lg font-bold mb-4">Select a VIN Report Package</h3>
+      <div class="space-y-4">
+        <button class="package-btn w-full py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600" data-package="basic">Basic Package - $19.99</button>
+        <button class="package-btn w-full py-2 px-4 bg-green-500 text-white rounded hover:bg-green-600" data-package="standard">Standard Package - $29.99</button>
+        <button class="package-btn w-full py-2 px-4 bg-purple-500 text-white rounded hover:bg-purple-600" data-package="premium">Premium Package - $39.99</button>
+      </div>
+    </div>
+  </div>
+
   <script type="text/javascript">
     document.getElementById('check-vin-btn').addEventListener('click', function (e) {
-      e.preventDefault(); // Prevent form submission
-
-      // Get the VIN number from the input field
+      e.preventDefault();
       var vin = document.getElementById('vin-input').value;
-
-      // If VIN is not empty, redirect to WooCommerce checkout with the VIN as a query parameter
       if (vin.trim() !== '') {
-        var checkoutUrl = '<?php echo wc_get_checkout_url(); ?>';
-        window.location.href = checkoutUrl + '?vin=' + encodeURIComponent(vin);
+        document.getElementById('package-modal').classList.remove('hidden');
       } else {
         alert('Please enter a valid VIN number.');
       }
+    });
+
+    document.querySelectorAll('.package-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var vin = document.getElementById('vin-input').value;
+        var package = this.getAttribute('data-package');
+        var checkoutUrl = '<?php echo wc_get_checkout_url(); ?>';
+        window.location.href = checkoutUrl + '?vin=' + encodeURIComponent(vin) + '&package=' + encodeURIComponent(package);
+      });
     });
   </script>
 </body>

@@ -4,14 +4,7 @@
 function call_vin_api($vin)
 {
     $api_url = "https://www.clearvin.com/rest/vendor/report?vin=" . urlencode($vin) . "&format=pdf&reportTemplate=2021";
-    
-    // Use a secure method to retrieve the authorization token
-//     $authorization_token = get_option('clearvin_api_token'); // Fetch token from DB or an env file
-    
-//     if (!$authorization_token) {
-//         return new WP_Error('missing_token', 'Authorization token is missing.');
-//     }
-    
+
     $args = array(
         'headers' => array(
             'Authorization' => 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbnZpcm9ubWVudCI6InRlc3QiLCJ1c2VyIjp7ImlkIjoyMjY4MzIsImVtYWlsIjoiYWNjb3VudHNAYXV0b2luc3BlY3QzNjAuY29tIn0sInZlbmRvciI6eyJpZCI6MzE1LCJzdGF0dXMiOiJhY3RpdmUiLCJpcCI6WyI1NC44Ni41MC4xMzkiLCIxNTQuMTkyLjEzNC42MyIsIjExNi43MS4xODMuMTk3IiwiMTU0LjE5Mi4wLjAiLCIxNTQuMTkyLjI1NS4yNTUiLCIxMTYuNzEuMC4wIiwiMTE2LjcxLjI1NS4yNTUiLCIxNTQuMTkyLjEzNS43IiwiMmEwMTo0Zjk6MzA4MDozZmMzOjoyIl19LCJpYXQiOjE3Mjc2OTc0NTYsImV4cCI6MTczMDI4OTQ1Nn0.gp2hTLFqG_z0O8JJiQ0ZpuqeYm0txGkimmDCcMB3g6o',
@@ -19,32 +12,15 @@ function call_vin_api($vin)
     );
 
     $response = wp_remote_get($api_url, $args);
-	 $response_code = wp_remote_retrieve_response_code($response);
+    $response_code = wp_remote_retrieve_response_code($response);
     $response_body = wp_remote_retrieve_body($response);
     $response_headers = wp_remote_retrieve_headers($response);
-  // Display the response for debugging purposes
-// Assuming $response_body contains the JSON response as a string
-// echo "<pre>";
-// $response_array = json_decode($response_body, true); // Decoding JSON string to an associative array
-// echo "</pre>";
 
-// // Check if decoding was successful and if 'html_report' exists
-// if (isset($response_array['result']['html_report'])) {
-//     // Print the 'html_report' content
-//     echo $response_array['result']['html_report'];
-// 	 error_log(print_r($response_array['result']['html_report'], true));
-// } else {
-//     echo "HTML report not found.";
-// 	 error_log('HTML report not found.', true);
-// }
-// 	return;
     if (is_wp_error($response)) {
         $error_message = $response->get_error_message();
         error_log(print_r($response, true));  // Log full error for debugging
         return "Something went wrong: $error_message";  
     }
-
-   
 
     if ($response_code !== 200) {
         $error_message = "Request failed with status code: $response_code";
@@ -92,61 +68,95 @@ if (isset($_POST['submit_vin'])) {
     }
 }
 
-// VIN Input Form
+// Updated UI
 ?>
-<div class="container mx-auto px-4 py-8 max-w-2xl !important">
-    <h2 class="text-3xl font-bold mb-6 text-center text-gray-800 !important">Enter VIN Number</h2>
-    <form method="POST" class="mb-12 bg-white shadow-md rounded px-8 pt-6 pb-8">
-        <div class="mb-6">
-            <label for="vin" class="block text-gray-700 text-sm font-bold mb-2">Enter VIN Number</label>
-            <input type="text" id="vin" name="vin" required
-                class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-blue-500 transition duration-300">
-        </div>
-        <div class="flex items-center justify-center">
-            <button type="submit" name="submit_vin"
-                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded focus:outline-none focus:shadow-outline transition duration-300 transform hover:scale-105">Submit</button>
-        </div>
-    </form>
+<div class="container mx-auto px-4 py-12 max-w-4xl">
+    <h1 class="text-4xl font-bold mb-8 text-center text-gray-800">VIN Report Generator</h1>
+    
+    <!-- VIN Input Form -->
+    <div class="bg-white shadow-lg rounded-lg p-8 mb-12">
+        <h2 class="text-2xl font-semibold mb-6 text-gray-700">Enter VIN Number</h2>
+        <form method="POST" class="space-y-6">
+            <div>
+                <label for="vin" class="block text-sm font-medium text-gray-700 mb-2">VIN Number</label>
+                <input type="text" id="vin" name="vin" required
+                    class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
+                    placeholder="Enter 17-digit VIN">
+            </div>
+            <div>
+                <button type="submit" name="submit_vin"
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-300 transform hover:-translate-y-1">
+                    Generate Report
+                </button>
+            </div>
+        </form>
+    </div>
 
-    <h2 class="text-3xl font-bold mb-6 text-center text-gray-800">Previous VIN Requests</h2>
-    <?php
-    global $wpdb;
-    $requests = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}vin_requests ORDER BY date DESC");
+    <!-- Previous VIN Requests -->
+    <div class="bg-white shadow-lg rounded-lg p-8">
+        <h2 class="text-2xl font-semibold mb-6 text-gray-700">Previous VIN Requests</h2>
+        <form method="GET" action="admin.php" class="mb-8">
+            <input type="hidden" name="page" value="vin-request-page" />
+            <div class="flex space-x-4">
+                <input type="text" name="search_vin" placeholder="Search by VIN" 
+                    class="flex-grow px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
+                <button type="submit" 
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-300">
+                    Search
+                </button>
+            </div>
+        </form>
 
-    if ($requests) {
-      echo '<div class="overflow-x-auto bg-white shadow-md rounded">';
-        echo '<table class="w-full table-auto">';
-        echo '<thead><tr class="bg-gray-200 text-gray-700 uppercase text-sm leading-normal">';
-        echo '<th class="py-3 px-6 text-left">VIN</th>';
-        echo '<th class="py-3 px-6 text-left">Report</th>';
-        echo '<th class="py-3 px-6 text-left">Copy URL</th>';
-        echo '<th class="py-3 px-6 text-left">Date</th>';
-        echo '</tr></thead>';
-        echo '<tbody>';
-         foreach ($requests as $request) {
-            echo '<tr class="border-b border-gray-200 hover:bg-gray-100">';
-            echo '<td class="py-3 px-6 text-left">' . esc_html($request->vin) . '</td>';
-            echo '<td class="py-3 px-6 text-left"><a href="' . esc_url($request->pdf_url) . '" class="text-blue-500 hover:text-blue-700 transition duration-300">View Report</a></td>';
-            echo '<td class="py-3 px-6 text-left"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="copyToClipboard(\'' . esc_url($request->pdf_url) . '\')">Copy URL</button></td>';
-            echo '<td class="py-3 px-6 text-left">' . esc_html($request->date) . '</td>';
-            echo '</tr>';
+        <?php
+        global $wpdb;
+        
+        // Handle search query
+        $search_vin = isset($_GET['search_vin']) ? sanitize_text_field($_GET['search_vin']) : '';
+
+        // Modify the query to filter by the search term, if provided
+        if (!empty($search_vin)) {
+            $requests = $wpdb->get_results(
+                $wpdb->prepare("SELECT * FROM {$wpdb->prefix}vin_requests WHERE vin LIKE %s ORDER BY date DESC", '%' . $wpdb->esc_like($search_vin) . '%')
+            );
+        } else {
+            $requests = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}vin_requests ORDER BY date DESC");
         }
-        echo '</tbody>';
-        echo '</table>';
-        echo '</div>';
-    } else {
-        echo '<p class="text-gray-600 text-center">No requests found.</p>';
-    }
-    ?>
-	
-	<script>
-// Function to copy the URL to the clipboard
-function copyToClipboard(url) {
-    navigator.clipboard.writeText(url).then(function() {
-        alert("Copied the URL: " + url);
-    }, function(err) {
-        alert("Failed to copy the URL: ", err);
-    });
-}
-</script>
+
+        if ($requests) {
+            echo '<div class="overflow-x-auto bg-white rounded-lg">';
+            echo '<table class="min-w-full divide-y divide-gray-200">';
+            echo '<thead class="bg-gray-50"><tr>';
+            echo '<th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">VIN</th>';
+            echo '<th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Report</th>';
+            echo '<th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>';
+            echo '<th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>';
+            echo '</tr></thead>';
+            echo '<tbody class="bg-white divide-y divide-gray-200">';
+            foreach ($requests as $request) {
+                echo '<tr>';
+                echo '<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">' . esc_html($request->vin) . '</td>';
+                echo '<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"><a href="' . esc_url($request->pdf_url) . '" class="text-blue-600 hover:text-blue-800 transition duration-300">View Report</a></td>';
+                echo '<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"><button class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-md transition duration-300" onclick="copyToClipboard(\'' . esc_url($request->pdf_url) . '\')">Copy URL</button></td>';
+                echo '<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">' . esc_html($request->date) . '</td>';
+                echo '</tr>';
+            }
+            echo '</tbody>';
+            echo '</table>';
+            echo '</div>';
+        } else {
+            echo '<p class="text-gray-600 text-center py-4">No previous requests found.</p>';
+        }
+        ?>
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert('URL copied to clipboard');
+            }, function(err) {
+                console.error('Failed to copy: ', err);
+                alert('Failed to copy URL. Please try again.');
+            });
+        }
+    </script>
 </div>
