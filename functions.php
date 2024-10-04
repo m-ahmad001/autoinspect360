@@ -3,7 +3,7 @@
 
 function enqueue_tailwind_styles()
 {
-    wp_enqueue_style('tailwindcss', get_template_directory_uri() . '/tailwind/tailwind.min.css', array(), '2.2.20');
+    wp_enqueue_style('tailwindcss', get_template_directory_uri() . '/tailwind/tailwind.min.css', array(), '3.4.13');
 }
 add_action('wp_enqueue_scripts', 'enqueue_tailwind_styles');
 add_action('admin_enqueue_scripts', 'enqueue_tailwind_styles');
@@ -135,24 +135,26 @@ register_activation_hook(__FILE__, 'create_vin_requests_table');
 
 add_action('template_redirect', 'handle_vin_package_selection');
 
-function handle_vin_package_selection() {
+function handle_vin_package_selection()
+{
     if (is_checkout() && isset($_GET['vin']) && isset($_GET['package'])) {
         $vin = sanitize_text_field($_GET['vin']);
         $package = sanitize_text_field($_GET['package']);
 
         // Map packages to product IDs (you'll need to replace these with your actual product IDs)
         $package_products = [
-            'basic' => 123,
-            'standard' => 124,
-            'premium' => 125
+            'basic' => 15,
+            'gold' => 17,
+            'platinum' => 18
         ];
 
         if (isset($package_products[$package])) {
             WC()->cart->empty_cart();
             WC()->cart->add_to_cart($package_products[$package]);
-            
+
             // Store VIN as order meta
             WC()->session->set('vin_number', $vin);
+            WC()->session->set('package', $package);
         }
     }
 }
@@ -160,11 +162,17 @@ function handle_vin_package_selection() {
 // Add VIN to order meta when checkout is processed
 add_action('woocommerce_checkout_create_order', 'add_vin_to_order_meta');
 
-function add_vin_to_order_meta($order) {
+function add_vin_to_order_meta($order)
+{
     $vin = WC()->session->get('vin_number');
+    $package = WC()->session->get('package');
     if ($vin) {
         $order->update_meta_data('vin_number', $vin);
         WC()->session->__unset('vin_number');
+    }
+    if ($package) {
+        $order->update_meta_data('package', $package);
+        WC()->session->__unset('package');
     }
 }
 

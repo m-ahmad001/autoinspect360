@@ -1,0 +1,14 @@
+{
+  "name": "autoinspect360",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./tailwind/tailwind.css -o ./tailwind/tailwind.min.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.13"
+  }
+}

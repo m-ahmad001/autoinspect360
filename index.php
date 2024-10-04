@@ -1,79 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 
-<head>
-  <title><?php bloginfo('name'); ?></title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/tailwind/tailwind.min.css"> -->
-  <link rel="icon" type="image/png" sizes="32x32" href="shuffle-for-tailwind.png">
- 
-</head>
 
-<body class="antialiased bg-body text-body font-body max-w-screen mx-auto">
-  <div class="">
+<?php get_header(); ?>
 
-    <?php get_header(); ?>
+<body class="antialiased bg-body text-body font-body h-full flex flex-col">
+  <div class="flex-grow flex flex-col">
 
-    <div class="flex flex-wrap items-center -mx-4 mt-10 lg:my-10 pb-10 lg:pb-16">
+
+    <div class="flex-grow container mx-auto px-4 py-10 ">
 
       <!-- HERO -->
-      <div class="container px-4 mx-auto">
-        <div class="flex flex-wrap items-center mx-4 md:flex-row-reverse">
-          <!-- Form Container -->
-          <div class="w-full lg:w-1/2 px-4 order-2 lg:order-2 md:order-2 order-1">
-            <p class="font-semibold mb-4 text-xl text-center md:text-left sm:text-sm text-gray-400">
-              Are you worried about buying a used car?
-            </p>
-            <h1 class="text-3xl md:text-5xl font-bold mb-4 text-center md:text-left">
-              Decode Your Vehicle's History with Ease
-            </h1>
+      <div class="flex flex-wrap items-center -mx-4 mt-10 lg:my-10 pb-10 lg:pb-16">
 
-            <div class="bg-white p-6 rounded-lg shadow-md">
-              <div class="flex mb-4">
-                <button class="bg-indigo-500 text-white px-6 py-3 rounded-l-md">
-                  by VIN
-                </button>
-                <button class="bg-gray-200 text-gray-700 px-6 py-3 rounded-r-md">
-                  by US License Plate
-                </button>
-              </div>
-              <div class="flex flex-col sm:flex-row">
-                <input type="text" placeholder="Enter VIN Number" id="vin-input"
-                  class="flex-grow p-3 border border-gray-400 rounded-md sm:rounded-r-none focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-2 sm:mb-0" />
-                <button id="check-vin-btn"
-                  class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-4 py-3 rounded-md sm:rounded-l-none text-sm sm:text-base">
-                  <span class="hidden sm:inline">Check VIN</span>
-                </button>
-              </div>
-              <div class="flex justify-between mt-4 text-sm text-gray-400">
-                <a href="#" class="text-indigo-500 hover:underline">Where to find the VIN?</a>
-                <div>
-                  <span class="text-gray-500">No VIN?</span>
-                  <a href="https://autoinspect360.com/wp-content/uploads/2024/09/vin_report_5YJ3E1EA7LF800340.pdf" target="_blank" class="text-indigo-500 hover:underline ml-1">Get AutoInspect360 reports</a>
-                </div>
+        <!-- Form Container -->
+        <div class="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
+          <p class="font-semibold mb-4 text-xl text-center md:text-left sm:text-sm text-red-400">
+            Are you worried about buying a used car?
+          </p>
+          <h1 class="text-3xl md:text-5xl font-bold mb-4 text-center md:text-left">
+            Decode Your Vehicle's History with Ease
+          </h1>
+
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex mb-4">
+              <button class="bg-indigo-500 text-white px-6 py-3 rounded-l-md">
+                by VIN
+              </button>
+              <button class="bg-gray-200 text-gray-700 px-6 py-3 rounded-r-md">
+                by US License Plate
+              </button>
+            </div>
+            <div class="flex flex-col sm:flex-row">
+              <input type="text" placeholder="Enter VIN Number" id="vin-input"
+                class="flex-grow p-3 border border-gray-400 rounded-md sm:rounded-r-none focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-2 sm:mb-0" />
+              <button id="check-vin-btn"
+                class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-4 py-3 rounded-md sm:rounded-l-none text-sm sm:text-base">
+                <span class="hidden sm:inline">Check VIN</span>
+              </button>
+            </div>
+            <div class="flex justify-between mt-4 text-sm text-gray-400">
+              <a href="#" class="text-indigo-500 hover:underline">Where to find the VIN?</a>
+              <div>
+                <span class="text-gray-500">No VIN?</span>
+                <a href="https://autoinspect360.com/wp-content/uploads/2024/09/vin_report_5YJ3E1EA7LF800340.pdf"
+                  target="_blank" class="text-indigo-500 hover:underline ml-1">Get AutoInspect360 reports</a>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Image Container -->
-          <div class="w-full md:w-1/2 px-4 order-1 lg:order-1 md:order-1 order-2 mt-10 lg:mt-0">
-            <img class="object-cover w-full rounded-xl"
-              src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/images/hero.jpg" alt="" />
-          </div>
+        <!-- Image Container -->
+        <div class="w-full lg:w-1/2 px-4">
+          <img class="object-cover w-full rounded-xl"
+            src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/images/hero.jpg" alt="" />
         </div>
       </div>
 
 
-      <!-- Button to scroll to the top -->
-      <!-- <button class="block mt-10 lg:mt-20 mx-auto w-16 h-16 p-5 rounded-full bg-indigo-50 hover:bg-indigo-100">
-        <svg class="mx-auto text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24"
-          stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-        </svg>
-      </button> -->
     </div>
+
+
+    <!-- Button to scroll to the top -->
+    <!-- <button class="block mt-10 lg:mt-20 mx-auto w-16 h-16 p-5 rounded-full bg-indigo-50 hover:bg-indigo-100">
+      <svg class="mx-auto text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </button> -->
 
     <section class="py-20">
       <div class="container px-4 mx-auto">
@@ -81,25 +75,25 @@
           <div class="w-1/2 lg:w-1/4 p-4">
             <div class="bg-gray-50 rounded-lg py-12">
               <img class="h-8 mx-auto"
-                src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/logos/jiggle-color.svg" alt="">
+                src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/logos/clear-vin.png" alt="">
             </div>
           </div>
           <div class="w-1/2 lg:w-1/4 p-4">
             <div class="bg-gray-50 rounded-lg py-12">
               <img class="h-8 mx-auto"
-                src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/logos/symtric-color.svg" alt="">
+                src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/logos/nmvtis.jpeg" alt="">
             </div>
           </div>
           <div class="w-1/2 lg:w-1/4 p-4">
             <div class="bg-gray-50 rounded-lg py-12">
               <img class="h-8 px-3 mx-auto"
-                src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/logos/wishelp-color.svg" alt="">
+                src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/logos/blackbook.png" alt="">
             </div>
           </div>
           <div class="w-1/2 lg:w-1/4 p-4">
             <div class="bg-gray-50 rounded-lg py-12">
               <img class="h-8 mx-auto"
-                src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/logos/resecurb-color.svg" alt="">
+                src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/logos/national-highway.png" alt="">
             </div>
           </div>
         </div>
@@ -114,8 +108,13 @@
             class="mt-2 mb-4 text-3xl leading-tight md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight text-white font-bold font-heading">
             Easy VIN Entry: Enter your VIN number effortlessly and quickly</h2>
 
-          <a class="inline-block px-5 py-3 text-sm bg-white hover:bg-indigo-50 text-indigo-500 font-semibold border border-white rounded transition duration-200"
-            href="#">Try Demo</a>
+          <!-- <a class="inline-block px-5 py-3 text-sm bg-white hover:bg-indigo-50 text-indigo-500 font-semibold border border-white rounded transition duration-200"
+            href="#">Try Demo</a> -->
+          <a href="https://autoinspect360.com/wp-content/uploads/2024/09/vin_report_5YJ3E1EA7LF800340.pdf"
+            target="_blank"
+            class="inline-block px-5 py-3 text-sm bg-white hover:bg-indigo-50 text-indigo-500 font-semibold border border-white rounded transition duration-200">
+            Example VIN Report
+          </a>
         </div>
         <div class="-mb-8 lg:-mb-64">
           <div class="flex flex-wrap -mx-4 -mb-8">
@@ -171,6 +170,77 @@
         </div>
       </div>
     </section>
+    <section class="py-20 bg-gradient-to-r from-indigo-50 to-indigo-100">
+      <div class="container px-4 mx-auto">
+        <h2 class="mb-12 text-4xl font-bold text-center text-indigo-800">Our Comprehensive Services</h2>
+        <div class="flex flex-wrap -mx-4">
+          <div class="w-full md:w-1/3 px-4 mb-8">
+            <div class="relative overflow-hidden rounded-xl shadow-lg group">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/images/bike.jpg"
+                alt="Bike Report"
+                class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-110">
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70 transition-opacity duration-300 group-hover:opacity-90">
+              </div>
+              <div
+                class="absolute inset-0 flex flex-col justify-end p-6 text-white transform translate-y-8 transition-transform duration-300 group-hover:translate-y-0">
+                <span
+                  class="bg-indigo-500 text-white text-xs font-semibold px-3 py-1 rounded-full mb-3 self-start">NEW</span>
+                <h3 class="text-2xl font-semibold mb-2">Motorcycle VIN Check</h3>
+                <p class="text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Uncover the
+                  complete history of your motorcycle or scooter with our detailed report.</p>
+                <a href="#"
+                  class="inline-block px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300 ease-in-out transform group-hover:-translate-y-1">Explore
+                  Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 px-4 mb-8">
+            <div class="relative overflow-hidden rounded-xl shadow-lg group">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/images/car.jpg" alt="Car Report"
+                class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-110">
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70 transition-opacity duration-300 group-hover:opacity-90">
+              </div>
+              <div
+                class="absolute inset-0 flex flex-col justify-end p-6 text-white transform translate-y-8 transition-transform duration-300 group-hover:translate-y-0">
+                <span
+                  class="bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full mb-3 self-start">POPULAR</span>
+                <h3 class="text-2xl font-semibold mb-2">Car VIN Check</h3>
+                <p class="text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Get
+                  comprehensive vehicle history for cars, trucks, and SUVs with our in-depth analysis.</p>
+                <a href="#"
+                  class="inline-block px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300 ease-in-out transform group-hover:-translate-y-1">Check
+                  Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 px-4 mb-8">
+            <div class="relative overflow-hidden rounded-xl shadow-lg group">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/images/van.jpg" alt="RV Report"
+                class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-110">
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70 transition-opacity duration-300 group-hover:opacity-90">
+              </div>
+              <div
+                class="absolute inset-0 flex flex-col justify-end p-6 text-white transform translate-y-8 transition-transform duration-300 group-hover:translate-y-0">
+                <span
+                  class="bg-yellow-500 text-white text-xs font-semibold px-3 py-1 rounded-full mb-3 self-start">TRENDING</span>
+                <h3 class="text-2xl font-semibold mb-2">Van & RV VIN Check</h3>
+                <p class="text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Unveil the
+                  complete history of vans and recreational vehicles with our detailed report.</p>
+                <a href="#"
+                  class="inline-block px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300 ease-in-out transform group-hover:-translate-y-1">Discover
+                  More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
 
     <section class="py-20">
       <div class="container px-4 mx-auto">
@@ -178,11 +248,11 @@
           <div class="w-full lg:w-1/2 px-4">
             <div class="max-w-lg lg:mx-auto mb-10 lg:mb-0">
               <span class="text-xs font-semibold text-indigo-500 uppercase">
-               How to run VIN check
+                How to run VIN check
               </span>
               <h2
                 class="mt-2 mb-4 text-3xl leading-tight md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight font-bold font-heading">
-                How Do I Run a Free VIN Check?</h2>
+                How Do I Run VIN Check?</h2>
               <!-- <p class="mb-8 text-base leading-relaxed lg:text-xl lg:leading-relaxed text-gray-500">Lorem ipsum dolor
                 sit amet, consectetur adipiscing elit. Pellentesque massa nibh, pulvinar vitae aliquet nec, accumsan
                 aliquet orci.</p> -->
@@ -213,6 +283,115 @@
                   <p class="text-lg text-gray-500 leading-loose">Get the Vehicle History Report</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container mx-auto px-4 py-8">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8">Where to Find VIN Number</h2>
+        <div class="w-full">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/images/where-to-find-vin.webp"
+            alt="VIN Number Location" class="w-full h-auto rounded-lg shadow-sm">
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20" x-data="{ pricing: '' }" x-init="pricing = $refs.pricing1.textContent">
+      <div class="container px-4 mx-auto">
+        <div class="max-w-xl lg:max-w-2xl mx-auto mb-12 text-center">
+          <span class="text-xs font-semibold text-indigo-500 uppercase">Choose Your Plan</span>
+          <h2
+            class="mt-2 mb-4 text-3xl leading-tight md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight font-bold font-heading">
+            Select the Best Plan That Fits Your Needs</h2>
+          <p class="mb-8 text-base leading-relaxed lg:text-xl lg:leading-relaxed text-gray-500">Explore our
+            comprehensive range of VIN Request Services designed to cater to your specific needs.</p>
+          <!-- <a x-ref="pricing1" x-on:click.prevent="pricing = $refs.pricing1.textContent"
+            class="mr-6 text-lg pb-2 border-b-4 border-indigo-500"
+            :class="{ 'border-indigo-500': pricing == $refs.pricing1.textContent, 'border-transparent hover:border-indigo-500': pricing != $refs.pricing1.textContent }"
+            href="#">Monthly</a><a x-ref="pricing2" x-on:click.prevent="pricing = $refs.pricing2.textContent"
+            class="text-lg pb-2 border-b-4 border-transparent hover:border-indigo-500"
+            :class="{ 'border-indigo-500': pricing == $refs.pricing2.textContent, 'border-transparent hover:border-indigo-500': pricing != $refs.pricing2.textContent }"
+            href="#">Yearly</a> -->
+        </div>
+        <div class="flex flex-wrap items-center -mx-4 -mb-6 lg:mb-0" id="pricing-section">
+          <div class="w-full lg:w-1/3 px-4 mb-6 lg:mb-0">
+            <div class="p-6 md:p-12 bg-gray-50 rounded lg:text-center">
+              <h3 class="text-2xl font-bold text-indigo-500">Basic</h3>
+              <span class="inline-block mb-6 text-4xl md:text-6xl font-bold font-heading">$35</span>
+              <ul class="mb-6 text-left text-lg">
+                <li class="mb-2 flex items-center">
+                  <svg class="mr-2 w-6 h-6 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewbox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <p>3 VIN Reports</p>
+                </li>
+                <li class="mb-2 flex items-center">
+                  <svg class="mr-2 w-6 h-6 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewbox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <p>Basic vehicle history</p>
+                </li>
+              </ul>
+              <a class="block w-full px-5 py-3 text-sm text-center bg-indigo-500 hover:bg-indigo-600 text-white font-semibold border border-indigo-500 hover:border-indigo-600 rounded transition duration-200 plan-button"
+                href="javascript:void(0)" data-plan="basic">Select Plan</a>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/3 px-4 mb-6 lg:mb-0">
+            <div class="p-6 md:p-12 bg-indigo-500 rounded lg:text-center">
+              <h3 class="text-2xl font-bold text-gray-50">Gold</h3>
+              <span class="inline-block mb-6 text-4xl md:text-6xl font-bold text-white">$45</span>
+              <ul class="mb-6 text-left text-lg">
+                <li class="mb-2 flex items-center">
+                  <svg class="mr-2 w-6 h-6 text-indigo-100" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewbox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <p class="text-lg text-white">10 VIN Reports</p>
+                </li>
+                <li class="mb-2 flex items-center">
+                  <svg class="mr-2 w-6 h-6 text-indigo-100" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewbox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <p class="text-lg text-white">Detailed vehicle history</p>
+                </li>
+              </ul>
+              <a class="block w-full px-5 py-3 text-sm text-center bg-white hover:bg-indigo-50 text-indigo-500 font-semibold border border-white hover:border-indigo-50 rounded transition duration-200 plan-button"
+                href="javascript:void(0)" data-plan="gold">Select Plan</a>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/3 px-4">
+            <div class="p-6 md:p-12 bg-gray-50 rounded lg:text-center">
+              <h3 class="text-2xl font-bold text-indigo-500">Platinum</h3>
+              <span class="inline-block mb-6 text-4xl md:text-6xl font-bold font-heading">$55</span>
+              <ul class="mb-6 text-left text-lg">
+                <li class="mb-2 flex items-center">
+                  <svg class="mr-2 w-6 h-6 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewbox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <p>20 VIN Reports</p>
+                </li>
+                <li class="mb-2 flex items-center">
+                  <svg class="mr-2 w-6 h-6 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewbox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <p>Comprehensive vehicle history</p>
+                </li>
+              </ul>
+              <a class="block w-full px-5 py-3 text-sm text-center bg-indigo-500 hover:bg-indigo-600 text-white font-semibold border border-indigo-500 hover:border-indigo-600 rounded transition duration-200 plan-button"
+                href="javascript:void(0)" data-plan="platinum">Select Plan</a>
             </div>
           </div>
         </div>
@@ -277,9 +456,9 @@
     <section class="py-20">
       <div class="container px-4 mx-auto">
         <div class="max-w-3xl mx-auto mb-12 lg:mb-16 text-center">
-            <span class="text-sm text-indigo-500 font-bold uppercase">
-              Customer Testimonials
-            </span>
+          <span class="text-sm text-indigo-500 font-bold uppercase">
+            Customer Testimonials
+          </span>
           <h2
             class="mt-2 mb-4 text-3xl leading-tight md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight font-bold font-heading">
             Customer Testimonials</h2>
@@ -326,14 +505,13 @@
       </div>
     </section>
 
-    <footer class="py-20">
+    <footer class="py-10">
       <div class="container px-4 mx-auto">
         <div class="flex flex-wrap items-center justify-between">
           <div class="w-full lg:w-1/5 mb-6 lg:mb-0">
             <a class="text-gray-600 text-2xl leading-none" href="#">
-              <img class="h-8"
-                src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/logos/360Logo.svg" alt=""
-                width="auto">
+              <img class="h-8" src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/logos/360Logo.svg"
+                alt="" width="auto">
             </a>
           </div>
           <div class="w-full lg:w-auto">
@@ -377,38 +555,43 @@
   </div>
 
 
-  <!-- Add this modal HTML at the end of your body tag -->
-  <div id="package-modal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden">
-    <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
-      <h3 class="text-lg font-bold mb-4">Select a VIN Report Package</h3>
-      <div class="space-y-4">
-        <button class="package-btn w-full py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600" data-package="basic">Basic Package - $19.99</button>
-        <button class="package-btn w-full py-2 px-4 bg-green-500 text-white rounded hover:bg-green-600" data-package="standard">Standard Package - $29.99</button>
-        <button class="package-btn w-full py-2 px-4 bg-purple-500 text-white rounded hover:bg-purple-600" data-package="premium">Premium Package - $39.99</button>
-      </div>
-    </div>
-  </div>
 
-  <script type="text/javascript">
-    document.getElementById('check-vin-btn').addEventListener('click', function (e) {
-      e.preventDefault();
-      var vin = document.getElementById('vin-input').value;
-      if (vin.trim() !== '') {
-        document.getElementById('package-modal').classList.remove('hidden');
-      } else {
-        alert('Please enter a valid VIN number.');
-      }
-    });
+  <script>
 
-    document.querySelectorAll('.package-btn').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var vin = document.getElementById('vin-input').value;
-        var package = this.getAttribute('data-package');
-        var checkoutUrl = '<?php echo wc_get_checkout_url(); ?>';
-        window.location.href = checkoutUrl + '?vin=' + encodeURIComponent(vin) + '&package=' + encodeURIComponent(package);
+    document.addEventListener('DOMContentLoaded', function () {
+      const vinInput = document.getElementById('vin-input');
+      const checkVinBtn = document.getElementById('check-vin-btn');
+
+      checkVinBtn.addEventListener('click', function () {
+        const vin = vinInput.value.trim();
+        if (vin) {
+          // Scroll to pricing section
+          const pricingSection = document.getElementById('pricing-section');
+          if (pricingSection) {
+            pricingSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+
+      // Add event listeners to plan buttons
+      const planButtons = document.querySelectorAll('.plan-button');
+      planButtons.forEach(button => {
+        button.addEventListener('click', function (e) {
+          e.preventDefault();
+          const vin = vinInput.value.trim();
+          console.log("🚀 ~ button.addEventListener ~ vin:", vin)
+          const planName = this.getAttribute('data-plan');
+          console.log("🚀 ~ button.addEventListener ~ planName:", planName)
+          if (vin && planName) {
+            // Navigate to checkout with VIN and plan name
+            window.location.href = `/checkout/?vin=${encodeURIComponent(vin)}&package=${encodeURIComponent(planName)}`;
+          }
+        });
       });
     });
   </script>
+
+
 </body>
 
 </html>

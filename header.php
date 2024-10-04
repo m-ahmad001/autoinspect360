@@ -3,16 +3,19 @@
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
+    <title><?php bloginfo('name'); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer></script>
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="<?php echo get_template_directory_uri(); ?>/assets/favicon.png">
     <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 
-    <header class="site-header" x-data="{ mobileNavOpen: false }">
+    <header class="site-header container mx-auto" x-data="{ mobileNavOpen: false }">
         <div class="container px-4 mx-auto">
-            <nav class="flex justify-between items-center py-8">
+            <nav class="flex justify-between items-center ">
                 <a class="text-gray-600 text-2xl leading-none" href="<?php echo home_url(); ?>">
                     <img class="h-14"
                         src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/logos/360Logo.svg"
