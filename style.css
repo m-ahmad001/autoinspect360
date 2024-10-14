@@ -12,3 +12,92 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: autoinspect360
 */
+.custom-page-content {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.custom-page-content h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.custom-page-content h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.custom-page-content p {
+  margin-bottom: 16px;
+}
+
+.custom-page-content ul,
+.custom-page-content ol {
+  margin-left: 24px;
+  margin-bottom: 16px;
+}
+
+.custom-page-content li {
+  margin-bottom: 8px;
+}
+
+.custom-page-content a {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+.custom-page-content a:hover {
+  text-decoration: none;
+}
+
+.custom-contact-form {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-contact-form input[type="text"],
+.custom-contact-form input[type="email"],
+.custom-contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.custom-contact-form input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-contact-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.custom-contact-form label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.custom-contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.custom-contact-form .form-submit {
+  text-align: right;
+}

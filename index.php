@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="h-full">
 
-
 <?php get_header(); ?>
 
 <body class="antialiased bg-body text-body font-body h-full flex flex-col">
@@ -15,7 +14,7 @@
 
         <!-- Form Container -->
         <div class="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
-          <p class="font-semibold mb-4 text-xl text-center md:text-left sm:text-sm text-red-400">
+          <p class="font-semibold mb-4 text-xl text-center md:text-left sm:text-sm text-gray-400">
             Are you worried about buying a used car?
           </p>
           <h1 class="text-3xl md:text-5xl font-bold mb-4 text-center md:text-left">
@@ -36,7 +35,7 @@
                 class="flex-grow p-3 border border-gray-400 rounded-md sm:rounded-r-none focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-2 sm:mb-0" />
               <button id="check-vin-btn"
                 class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-4 py-3 rounded-md sm:rounded-l-none text-sm sm:text-base">
-                <span class="hidden sm:inline">Check VIN</span>
+                <span class="sm:inline">Check VIN</span>
               </button>
             </div>
             <div class="flex justify-between mt-4 text-sm text-gray-400">
@@ -170,7 +169,9 @@
         </div>
       </div>
     </section>
-    <section class="py-20 bg-gradient-to-r from-indigo-50 to-indigo-100">
+
+
+    <section class=" mt-10 py-20 bg-gradient-to-r from-gray-50 to-gray-100">
       <div class="container px-4 mx-auto">
         <h2 class="mb-12 text-4xl font-bold text-center text-indigo-800">Our Comprehensive Services</h2>
         <div class="flex flex-wrap -mx-4">
@@ -288,7 +289,7 @@
         </div>
       </div>
     </section>
-    <section>
+    <section id="where-to-find-vin">
       <div class="container mx-auto px-4 py-8">
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8">Where to Find VIN Number</h2>
         <div class="w-full">
@@ -453,7 +454,7 @@
       </div>
     </section>
 
-    <section class="py-20">
+    <section id="testimonials" class="py-20">
       <div class="container px-4 mx-auto">
         <div class="max-w-3xl mx-auto mb-12 lg:mb-16 text-center">
           <span class="text-sm text-indigo-500 font-bold uppercase">

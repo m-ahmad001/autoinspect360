@@ -13,9 +13,9 @@
 
 <body <?php body_class(); ?>>
 
-    <header class="site-header container mx-auto" x-data="{ mobileNavOpen: false }">
+    <header class="site-header mx-auto py-4 fixed top-0 left-0 right-0 bg-white z-50" x-data="{ mobileNavOpen: false }">
         <div class="container px-4 mx-auto">
-            <nav class="flex justify-between items-center ">
+            <nav class="flex justify-between items-center">
                 <a class="text-gray-600 text-2xl leading-none" href="<?php echo home_url(); ?>">
                     <img class="h-14"
                         src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/logos/360Logo.svg"
@@ -30,9 +30,14 @@
                         </svg>
                     </button>
                 </div>
-                <!-- <ul class="hidden lg:flex ml-auto mr-10 items-center w-auto space-x-12">
-                    <li><a class="text-sm hover:text-indigo-700 font-medium" href="#">About Us</a></li>
-                </ul> -->
+                <ul class="hidden lg:flex ml-auto mr-10 items-center w-auto space-x-8">
+                    <li><a class="text-sm hover:text-indigo-700 font-medium cursor-pointer"
+                            onclick="scrollToSection('where-to-find-vin')">Where to Find VIN</a></li>
+                    <li><a class="text-sm hover:text-indigo-700 font-medium cursor-pointer"
+                            onclick="scrollToSection('pricing-section')">Pricing</a></li>
+                    <li><a class="text-sm hover:text-indigo-700 font-medium cursor-pointer"
+                            onclick="scrollToSection('testimonials')">Testimonials</a></li>
+                </ul>
                 <a class="hidden lg:block px-5 py-3 text-sm font-semibold text-indigo-500 hover:text-white hover:bg-indigo-500 border border-indigo-500 hover:border-indigo-600 rounded transition duration-200"
                     href="https://autoinspect360.com/contact-us">Contact Us</a>
             </nav>
@@ -56,9 +61,16 @@
                         </button>
                     </div>
                     <ul>
-                        <!-- <li class="mb-1"><a
+                        <li class="mb-1"><a
                                 class="block p-4 text-sm font-semibold hover:bg-indigo-50 hover:text-indigo-500 rounded"
-                                href="#">About Us</a></li> -->
+                                onclick="scrollToSection('where-to-find-vin'); mobileNavOpen = false;">Where to Find
+                                VIN</a></li>
+                        <li class="mb-1"><a
+                                class="block p-4 text-sm font-semibold hover:bg-indigo-50 hover:text-indigo-500 rounded"
+                                onclick="scrollToSection('pricing-section'); mobileNavOpen = false;">Pricing</a></li>
+                        <li class="mb-1"><a
+                                class="block p-4 text-sm font-semibold hover:bg-indigo-50 hover:text-indigo-500 rounded"
+                                onclick="scrollToSection('testimonials'); mobileNavOpen = false;">Testimonials</a></li>
                     </ul>
                     <div class="mt-auto pt-6">
                         <a class="block px-5 py-3 text-sm text-center font-semibold text-indigo-500 hover:text-white hover:bg-indigo-500 border border-indigo-500 hover:border-indigo-600 rounded transition duration-200"
@@ -71,3 +83,17 @@
             </div>
         </div>
     </header>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const headerHeight = document.querySelector('.site-header').offsetHeight;
+                const sectionPosition = section.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                window.scrollTo({
+                    top: sectionPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    </script>
