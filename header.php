@@ -86,14 +86,19 @@
 
     <script>
         function scrollToSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            if (section) {
-                const headerHeight = document.querySelector('.site-header').offsetHeight;
-                const sectionPosition = section.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                window.scrollTo({
-                    top: sectionPosition,
-                    behavior: 'smooth'
-                });
+            const currentPath = window.location.pathname;
+            if (currentPath === '/' || currentPath === '/index.php') {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    const headerHeight = document.querySelector('.site-header').offsetHeight;
+                    const sectionPosition = section.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    window.scrollTo({
+                        top: sectionPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            } else {
+                window.location.href = '/#' + sectionId;
             }
         }
     </script>
