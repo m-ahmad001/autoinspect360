@@ -23,12 +23,12 @@
 
           <div class="bg-white p-6 rounded-lg shadow-md">
             <div class="flex mb-4">
-              <button class="bg-indigo-500 text-white px-6 py-3 rounded-l-md">
+              <button class="bg-indigo-500 text-white px-6 py-3 rounded-md">
                 by VIN
               </button>
-              <button class="bg-gray-200 text-gray-700 px-6 py-3 rounded-r-md">
+              <!-- <button class="bg-gray-200 text-gray-700 px-6 py-3 rounded-r-md">
                 by US License Plate
-              </button>
+              </button> -->
             </div>
             <div class="flex flex-col sm:flex-row">
               <input type="text" placeholder="Enter VIN Number" id="vin-input"
@@ -39,7 +39,7 @@
               </button>
             </div>
             <div class="flex justify-between mt-4 text-sm text-gray-400">
-              <a href="#" class="text-indigo-500 hover:underline">Where to find the VIN?</a>
+              <a href="#where-to-find-vin" class="text-indigo-500 hover:underline">Where to find the VIN?</a>
               <div>
                 <span class="text-gray-500">No VIN?</span>
                 <a href="https://autoinspect360.com/wp-content/uploads/2024/09/vin_report_5YJ3E1EA7LF800340.pdf"
@@ -93,6 +93,60 @@
             <div class="bg-gray-50 rounded-lg py-12">
               <img class="h-8 mx-auto"
                 src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/logos/national-highway.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+      <div class="container px-4 mx-auto">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-indigo-800 mb-4">Why Choose Us?</h2>
+          <p class="text-xl text-indigo-600">Discover the AutoInspect360 advantage</p>
+        </div>
+
+        <div class="flex flex-wrap -mx-4">
+          <div class="w-full md:w-1/3 px-4 mb-8">
+            <div class="bg-white rounded-lg shadow-lg p-8 h-full transition duration-300 hover:shadow-xl">
+              <div class="text-4xl text-indigo-500 mb-4">
+                <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Comprehensive Reports</h3>
+              <p class="text-gray-600 text-center">Avoid hidden problems like accidents, odometer fraud, and recalls.
+              </p>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 px-4 mb-8">
+            <div class="bg-white rounded-lg shadow-lg p-8 h-full transition duration-300 hover:shadow-xl">
+              <div class="text-4xl text-indigo-500 mb-4">
+                <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Secure Payment</h3>
+              <p class="text-gray-600 text-center">100% safe and encrypted transactions.</p>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 px-4 mb-8">
+            <div class="bg-white rounded-lg shadow-lg p-8 h-full transition duration-300 hover:shadow-xl">
+              <div class="text-4xl text-indigo-500 mb-4">
+                <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Instant Access</h3>
+              <p class="text-gray-600 text-center">Reports delivered within seconds.</p>
             </div>
           </div>
         </div>
@@ -184,14 +238,14 @@
                 class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70 transition-opacity duration-300 group-hover:opacity-90">
               </div>
               <div
-                class="absolute inset-0 flex flex-col justify-end p-6 text-white transform translate-y-8 transition-transform duration-300 group-hover:translate-y-0">
+                class="absolute inset-0 flex flex-col justify-end p-10 text-white transform translate-y-8 transition-transform duration-300 group-hover:translate-y-0">
                 <span
                   class="bg-indigo-500 text-white text-xs font-semibold px-3 py-1 rounded-full mb-3 self-start">NEW</span>
                 <h3 class="text-2xl font-semibold mb-2">Motorcycle VIN Check</h3>
                 <p class="text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Uncover the
                   complete history of your motorcycle or scooter with our detailed report.</p>
                 <a href="#"
-                  class="inline-block px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300 ease-in-out transform group-hover:-translate-y-1">Explore
+                  class="inline-block px-6 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-700 transition duration-300 ease-in-out transform group-hover:-translate-y-1">Explore
                   Now</a>
               </div>
             </div>
@@ -204,14 +258,14 @@
                 class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70 transition-opacity duration-300 group-hover:opacity-90">
               </div>
               <div
-                class="absolute inset-0 flex flex-col justify-end p-6 text-white transform translate-y-8 transition-transform duration-300 group-hover:translate-y-0">
+                class="absolute inset-0 flex flex-col justify-end p-10 text-white transform translate-y-8 transition-transform duration-300 group-hover:translate-y-0">
                 <span
                   class="bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full mb-3 self-start">POPULAR</span>
                 <h3 class="text-2xl font-semibold mb-2">Car VIN Check</h3>
                 <p class="text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Get
                   comprehensive vehicle history for cars, trucks, and SUVs with our in-depth analysis.</p>
                 <a href="#"
-                  class="inline-block px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300 ease-in-out transform group-hover:-translate-y-1">Check
+                  class="inline-block px-6 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-700 transition duration-300 ease-in-out transform group-hover:-translate-y-1">Check
                   Now</a>
               </div>
             </div>
@@ -224,14 +278,14 @@
                 class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70 transition-opacity duration-300 group-hover:opacity-90">
               </div>
               <div
-                class="absolute inset-0 flex flex-col justify-end p-6 text-white transform translate-y-8 transition-transform duration-300 group-hover:translate-y-0">
+                class="absolute inset-0 flex flex-col justify-end p-10 text-white transform translate-y-8 transition-transform duration-300 group-hover:translate-y-0">
                 <span
                   class="bg-yellow-500 text-white text-xs font-semibold px-3 py-1 rounded-full mb-3 self-start">TRENDING</span>
                 <h3 class="text-2xl font-semibold mb-2">Van & RV VIN Check</h3>
                 <p class="text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Unveil the
                   complete history of vans and recreational vehicles with our detailed report.</p>
                 <a href="#"
-                  class="inline-block px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300 ease-in-out transform group-hover:-translate-y-1">Discover
+                  class="inline-block px-6 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-700 transition duration-300 ease-in-out transform group-hover:-translate-y-1">Discover
                   More</a>
               </div>
             </div>
@@ -289,6 +343,8 @@
         </div>
       </div>
     </section>
+
+
     <section id="where-to-find-vin">
       <div class="container mx-auto px-4 py-8">
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8">Where to Find VIN Number</h2>
@@ -299,110 +355,174 @@
       </div>
     </section>
 
-    <section class="py-20" x-data="{ pricing: '' }" x-init="pricing = $refs.pricing1.textContent">
+    <section class="py-20 bg-gray-50" x-data="{ pricing: '' }" x-init="pricing = $refs.pricing1.textContent">
       <div class="container px-4 mx-auto">
-        <div class="max-w-xl lg:max-w-2xl mx-auto mb-12 text-center">
-          <span class="text-xs font-semibold text-indigo-500 uppercase">Choose Your Plan</span>
+        <div class="max-w-xl lg:max-w-3xl mx-auto mb-16 text-center">
+          <span class="text-xs font-semibold text-indigo-500 uppercase">Pricing Plans</span>
           <h2
             class="mt-2 mb-4 text-3xl leading-tight md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight font-bold font-heading">
-            Select the Best Plan That Fits Your Needs</h2>
-          <p class="mb-8 text-base leading-relaxed lg:text-xl lg:leading-relaxed text-gray-500">Explore our
-            comprehensive range of VIN Request Services designed to cater to your specific needs.</p>
-          <!-- <a x-ref="pricing1" x-on:click.prevent="pricing = $refs.pricing1.textContent"
-            class="mr-6 text-lg pb-2 border-b-4 border-indigo-500"
-            :class="{ 'border-indigo-500': pricing == $refs.pricing1.textContent, 'border-transparent hover:border-indigo-500': pricing != $refs.pricing1.textContent }"
-            href="#">Monthly</a><a x-ref="pricing2" x-on:click.prevent="pricing = $refs.pricing2.textContent"
-            class="text-lg pb-2 border-b-4 border-transparent hover:border-indigo-500"
-            :class="{ 'border-indigo-500': pricing == $refs.pricing2.textContent, 'border-transparent hover:border-indigo-500': pricing != $refs.pricing2.textContent }"
-            href="#">Yearly</a> -->
+            Choose What Works Best for You
+          </h2>
+          <p class="mb-8 text-xl leading-relaxed text-gray-500">
+            Select the plan that fits your needs and get comprehensive vehicle history insights.
+          </p>
         </div>
-        <div class="flex flex-wrap items-center -mx-4 -mb-6 lg:mb-0" id="pricing-section">
-          <div class="w-full lg:w-1/3 px-4 mb-6 lg:mb-0">
-            <div class="p-6 md:p-12 bg-gray-50 rounded lg:text-center">
-              <h3 class="text-2xl font-bold text-indigo-500">Basic</h3>
-              <span class="inline-block mb-6 text-4xl md:text-6xl font-bold font-heading">$35</span>
-              <ul class="mb-6 text-left text-lg">
+        <div class="flex flex-wrap items-stretch -mx-4" id="pricing-section">
+          <div class="w-full lg:w-1/3 px-4 mb-8 lg:mb-0">
+            <div class="p-8 bg-white rounded-lg shadow-lg h-full flex flex-col">
+              <h3 class="text-2xl font-bold text-indigo-500 mb-4">Basic Plan</h3>
+              <div class="mb-6">
+                <span class="text-5xl font-bold">$35</span>
+              </div>
+              <ul class="mb-6 text-lg text-gray-600 flex-grow">
                 <li class="mb-2 flex items-center">
-                  <svg class="mr-2 w-6 h-6 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewbox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  <svg class="mr-2 w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                   </svg>
-                  <p>3 VIN Reports</p>
+                  1 Report
                 </li>
                 <li class="mb-2 flex items-center">
-                  <svg class="mr-2 w-6 h-6 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewbox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  <svg class="mr-2 w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                   </svg>
-                  <p>Basic vehicle history</p>
+                  Vehicle Report
+                </li>
+                <li class="mb-2 flex items-center">
+                  <svg class="mr-2 w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  DMV Title History
+                </li>
+                <li class="mb-2 flex items-center">
+                  <svg class="mr-2 w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Safety Recall Status
+                </li>
+                <li class="mb-2 flex items-center">
+                  <svg class="mr-2 w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Vehicle Specification
+                </li>
+                <li class="mb-2 flex items-center">
+                  <svg class="mr-2 w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Accident Information
+                </li>
+                <li class="mb-2 flex items-center">
+                  <svg class="mr-2 w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Online Listing History
+                </li>
+                <li class="mb-2 flex items-center">
+                  <svg class="mr-2 w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Lifetime Access
                 </li>
               </ul>
-              <a class="block w-full px-5 py-3 text-sm text-center bg-indigo-500 hover:bg-indigo-600 text-white font-semibold border border-indigo-500 hover:border-indigo-600 rounded transition duration-200 plan-button"
-                href="javascript:void(0)" data-plan="basic">Select Plan</a>
+              <a class="block w-full px-5 py-3 text-sm text-center bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded transition duration-200 plan-button"
+                href="javascript:void(0)" data-plan="basic">Select the Basic Plan Now</a>
             </div>
           </div>
-          <div class="w-full lg:w-1/3 px-4 mb-6 lg:mb-0">
-            <div class="p-6 md:p-12 bg-indigo-500 rounded lg:text-center">
-              <h3 class="text-2xl font-bold text-gray-50">Gold</h3>
-              <span class="inline-block mb-6 text-4xl md:text-6xl font-bold text-white">$45</span>
-              <ul class="mb-6 text-left text-lg">
+          <div class="w-full lg:w-1/3 px-4 mb-8 lg:mb-0">
+            <div class="p-8 bg-indigo-500 rounded-lg shadow-lg h-full flex flex-col">
+              <h3 class="text-2xl font-bold text-white mb-4">Gold Plan</h3>
+              <div class="mb-6">
+                <span class="text-5xl font-bold text-white">$45</span>
+              </div>
+              <ul class="mb-6 text-lg text-white flex-grow">
                 <li class="mb-2 flex items-center">
-                  <svg class="mr-2 w-6 h-6 text-indigo-100" xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewbox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  <svg class="mr-2 w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                   </svg>
-                  <p class="text-lg text-white">10 VIN Reports</p>
+                  2 Reports
                 </li>
                 <li class="mb-2 flex items-center">
-                  <svg class="mr-2 w-6 h-6 text-indigo-100" xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewbox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  <svg class="mr-2 w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                   </svg>
-                  <p class="text-lg text-white">Detailed vehicle history</p>
+                  All Basic Plan Features
+                </li>
+                <li class="mb-2 flex items-center">
+                  <svg class="mr-2 w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Enhanced Details
                 </li>
               </ul>
-              <a class="block w-full px-5 py-3 text-sm text-center bg-white hover:bg-indigo-50 text-indigo-500 font-semibold border border-white hover:border-indigo-50 rounded transition duration-200 plan-button"
-                href="javascript:void(0)" data-plan="gold">Select Plan</a>
+              <a class="block w-full px-5 py-3 text-sm text-center bg-white  text-indigo-500 font-semibold rounded transition duration-200 plan-button"
+                href="javascript:void(0)" data-plan="gold">Select the Gold Plan Now</a>
             </div>
           </div>
           <div class="w-full lg:w-1/3 px-4">
-            <div class="p-6 md:p-12 bg-gray-50 rounded lg:text-center">
-              <h3 class="text-2xl font-bold text-indigo-500">Platinum</h3>
-              <span class="inline-block mb-6 text-4xl md:text-6xl font-bold font-heading">$55</span>
-              <ul class="mb-6 text-left text-lg">
+            <div class="p-8 bg-white rounded-lg shadow-lg h-full flex flex-col">
+              <h3 class="text-2xl font-bold text-indigo-500 mb-4">Platinum Plan</h3>
+              <div class="mb-6">
+                <span class="text-5xl font-bold">$55</span>
+              </div>
+              <ul class="mb-6 text-lg text-gray-600 flex-grow">
                 <li class="mb-2 flex items-center">
-                  <svg class="mr-2 w-6 h-6 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewbox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  <svg class="mr-2 w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                   </svg>
-                  <p>20 VIN Reports</p>
+                  3 Reports
                 </li>
                 <li class="mb-2 flex items-center">
-                  <svg class="mr-2 w-6 h-6 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewbox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  <svg class="mr-2 w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                   </svg>
-                  <p>Comprehensive vehicle history</p>
+                  All Gold Plan Features
+                </li>
+                <li class="mb-2 flex items-center">
+                  <svg class="mr-2 w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Comprehensive Insights
+                </li>
+                <li class="mb-2 flex items-center">
+                  <svg class="mr-2 w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Best for Serious Buyers
                 </li>
               </ul>
-              <a class="block w-full px-5 py-3 text-sm text-center bg-indigo-500 hover:bg-indigo-600 text-white font-semibold border border-indigo-500 hover:border-indigo-600 rounded transition duration-200 plan-button"
-                href="javascript:void(0)" data-plan="platinum">Select Plan</a>
+              <a class="block w-full px-5 py-3 text-sm text-center bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded transition duration-200 plan-button"
+                href="javascript:void(0)" data-plan="platinum">Select the Platinum Plan Now</a>
             </div>
           </div>
         </div>
       </div>
+
+
     </section>
 
-    <section class="py-20">
+    <section class="py-20 ">
       <div class="container px-4 mx-auto">
-        <div class="flex flex-wrap items-center -mx-4 -mb-8">
-          <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 text-center">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-indigo-800 mb-4">Our Impact in Numbers</h2>
+          <p class="text-xl text-indigo-600">Discover the reach and reliability of AutoInspect360</p>
+        </div>
+        <div class="flex flex-wrap items-center justify-center -mx-4 -mb-8">
+          <div class="w-full sm:w-1/2 md:w-1/4 px-4 mb-8 text-center ">
             <svg class="mx-auto mb-4 text-indigo-500" width="48" height="48" viewbox="0 0 48 48" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -413,7 +533,7 @@
             <h3 class="mb-2 text-2xl font-bold font-heading">3M+ Reports</h3>
             <p class="text-lg text-gray-500">Trusted vehicle checks</p>
           </div>
-          <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 text-center">
+          <div class="w-full sm:w-1/2 md:w-1/4 px-4 mb-8 text-center ">
             <svg class="mx-auto mb-4 text-indigo-500" width="48" height="48" viewbox="0 0 48 48" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -422,11 +542,9 @@
               <circle cx="24" cy="24" r="23.5" stroke="currentColor"></circle>
             </svg>
             <h3 class="mb-2 text-2xl font-bold font-heading">99.8% Satisfaction</h3>
-            <p class="text-lg text-gray-500">Highly rated service.
-
-            </p>
+            <p class="text-lg text-gray-500">Highly rated service</p>
           </div>
-          <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 text-center">
+          <div class="w-full sm:w-1/2 md:w-1/4 px-4 mb-8 text-center ">
             <svg class="mx-auto mb-4 text-indigo-500" width="48" height="48" viewbox="0 0 48 48" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -435,11 +553,9 @@
               <circle cx="24" cy="24" r="23.5" stroke="currentColor"></circle>
             </svg>
             <h3 class="mb-2 text-2xl font-bold font-heading">1M+ Analyzed</h3>
-            <p class="text-lg text-gray-500">Cars reviewed yearly.
-
-            </p>
+            <p class="text-lg text-gray-500">Cars reviewed yearly</p>
           </div>
-          <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 text-center">
+          <div class="w-full sm:w-1/2 md:w-1/4 px-4 mb-8 text-center ">
             <svg class="mx-auto mb-4 text-indigo-500" width="48" height="48" viewbox="0 0 48 48" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -448,11 +564,13 @@
               <circle cx="24" cy="24" r="23.5" stroke="currentColor"></circle>
             </svg>
             <h3 class="mb-2 text-2xl font-bold font-heading">5+ Years</h3>
-            <p class="text-lg text-gray-500">Proven industry experience.</p>
+            <p class="text-lg text-gray-500">Proven industry experience</p>
           </div>
         </div>
       </div>
     </section>
+
+
 
     <section id="testimonials" class="py-20">
       <div class="container px-4 mx-auto">
@@ -463,40 +581,35 @@
           <h2
             class="mt-2 mb-4 text-3xl leading-tight md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight font-bold font-heading">
             Customer Testimonials</h2>
-          <p class="text-lg text-gray-500 leading-loose">Discover how our service transformed their experience.</p>
+          <p class="text-lg text-gray-500 leading-loose">Here’s how Auto Inspect 360 has helped real customers.</p>
         </div>
         <div class="flex flex-wrap items-center justify-around -m-4">
           <div class="w-full md:w-1/2 lg:w-1/3 p-4">
             <div class="bg-gray-50 p-6 rounded-lg">
-              <p class="mb-8 text-base leading-relaxed lg:text-xl lg:leading-relaxed text-gray-500">The VIN report was
-                incredibly detailed and accurate!</p>
+              <p class="mb-8 text-base leading-relaxed lg:text-xl lg:leading-relaxed text-gray-500">Saved me from buying
+                a lemon! Highly accurate report.</p>
               <img class="mb-2 h-12 w-12 object-cover rounded-full"
-                src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/images/indigo-500-avatar.png"
-                alt="">
-              <p class="text-2xl font-bold font-heading">John Doe</p>
-              <p class="text-lg text-gray-400">CEO, Auto Insights</p>
+                src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/images/male1.jpg" alt="">
+              <p class="text-2xl font-bold font-heading">Michael T.</p>
+
             </div>
           </div>
           <div class="w-full md:w-1/2 lg:w-1/3 p-4">
             <div class="bg-gray-50 p-6 rounded-lg">
-              <p class="mb-8 text-base leading-relaxed lg:text-xl lg:leading-relaxed text-gray-500">I saved so much time
-                with this service!</p>
+              <p class="mb-8 text-base leading-relaxed lg:text-xl lg:leading-relaxed text-gray-500">Quick and easy.
+                Found out about a recall in minutes.</p>
               <img class="mb-2 h-12 w-12 object-cover rounded-full"
-                src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/images/indigo-500-avatar.png"
-                alt="">
-              <p class="text-2xl font-bold font-heading">Jane Smith</p>
-              <p class="text-lg text-gray-400">Manager, Vehicle Hub</p>
+                src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/images/female1.jpg" alt="">
+              <p class="text-2xl font-bold font-heading">Sarah W.</p>
             </div>
           </div>
           <div class="w-full md:w-1/2 lg:w-1/3 p-4">
             <div class="bg-gray-50 p-6 rounded-lg">
-              <p class="mb-8 text-base leading-relaxed lg:text-xl lg:leading-relaxed text-gray-500">This is a must-have
-                for any car buyer!</p>
+              <p class="mb-8 text-base leading-relaxed lg:text-xl lg:leading-relaxed text-gray-500">A game-changer for
+                anyone buying used cars.</p>
               <img class="mb-2 h-12 w-12 object-cover rounded-full"
-                src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/images/indigo-500-avatar.png"
-                alt="">
-              <p class="text-2xl font-bold font-heading">Emily Johnson</p>
-              <p class="text-lg text-gray-400">Director, CarSmart</p>
+                src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/images/male2.jpg" alt="">
+              <p class="text-2xl font-bold font-heading">David L.</p>
             </div>
           </div>
 
@@ -506,53 +619,56 @@
       </div>
     </section>
 
-    <footer class="py-10">
-      <div class="container px-4 mx-auto">
-        <div class="flex flex-wrap items-center justify-between">
-          <div class="w-full lg:w-1/5 mb-6 lg:mb-0">
-            <a class="text-gray-600 text-2xl leading-none" href="#">
-              <img class="h-8" src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/logos/360Logo.svg"
-                alt="" width="auto">
-            </a>
-          </div>
-          <div class="w-full lg:w-auto">
-            <ul class="flex flex-wrap items-center">
-              <!-- <li class="mb-4 md:mb-0 mx-4"><a class="text-sm hover:text-indigo-700 font-medium" href="#">About</a></li> -->
-              <!-- <li class="mb-4 md:mb-0 mx-4"><a class="text-sm hover:text-indigo-700 font-medium" href="#">Company</a>
+  </div>
+
+
+  <footer class="py-10">
+    <div class="container px-4 mx-auto">
+      <div class="flex flex-wrap items-center justify-between">
+        <div class="w-full lg:w-1/5 mb-6 lg:mb-0">
+          <a class="text-gray-600 text-2xl leading-none" href="#">
+            <img class="h-8" src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/logos/360Logo.svg"
+              alt="" width="auto">
+          </a>
+        </div>
+        <div class="w-full lg:w-auto">
+          <ul class="flex flex-wrap items-center">
+            <!-- <li class="mb-4 md:mb-0 mx-4"><a class="text-sm hover:text-indigo-700 font-medium" href="#">About</a></li> -->
+            <!-- <li class="mb-4 md:mb-0 mx-4"><a class="text-sm hover:text-indigo-700 font-medium" href="#">Company</a>
               </li>
               <li class="mb-4 md:mb-0 mx-4"><a class="text-sm hover:text-indigo-700 font-medium" href="#">Services</a>
               </li>
               <li class="mb-4 md:mb-0 mx-4"><a class="text-sm hover:text-indigo-700 font-medium"
                   href="#">Testimonials</a></li> -->
-            </ul>
-          </div>
+          </ul>
         </div>
       </div>
-      <div class="mt-16 mb-8 border-b"></div>
-      <div class="container px-4 mx-auto">
-        <div class="flex flex-wrap justify-between items-center">
-          <p class="w-full lg:w-auto mt-4 lg:mt-0 order-last lg:order-first text-sm text-gray-500">All rights reserved.
-            © 360AutoInspect.</p>
-          <div class="order-first lg:order-last">
-            <a class="inline-block mr-8" href="#">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/socials/facebook.svg" alt="">
-            </a>
-            <a class="inline-block mr-8" href="#">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/socials/twitter.svg" alt="">
-            </a>
-            <a class="inline-block mr-8" href="#">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/socials/github.svg" alt="">
-            </a>
-            <a class="inline-block mr-8" href="#">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/socials/instagram.svg" alt="">
-            </a>
-            <a class="inline-block" href="#">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/socials/linkedin.svg" alt="">
-            </a>
-          </div>
+    </div>
+    <div class="mt-16 mb-8 border-b"></div>
+    <div class="container px-4 mx-auto">
+      <div class="flex flex-wrap justify-between items-center">
+        <p class="w-full lg:w-auto mt-4 lg:mt-0 order-last lg:order-first text-sm text-gray-500">All rights reserved.
+          © 360AutoInspect.</p>
+        <div class="order-first lg:order-last">
+          <a class="inline-block mr-8" href="#">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/socials/facebook.svg" alt="">
+          </a>
+          <a class="inline-block mr-8" href="#">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/socials/twitter.svg" alt="">
+          </a>
+          <a class="inline-block mr-8" href="#">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/socials/github.svg" alt="">
+          </a>
+          <a class="inline-block mr-8" href="#">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/socials/instagram.svg" alt="">
+          </a>
+          <a class="inline-block" href="#">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/socials/linkedin.svg" alt="">
+          </a>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
   </div>
 
 
@@ -576,16 +692,20 @@
 
       // Add event listeners to plan buttons
       const planButtons = document.querySelectorAll('.plan-button');
+      
       planButtons.forEach(button => {
         button.addEventListener('click', function (e) {
           e.preventDefault();
           const vin = vinInput.value.trim();
-          console.log("🚀 ~ button.addEventListener ~ vin:", vin)
           const planName = this.getAttribute('data-plan');
-          console.log("🚀 ~ button.addEventListener ~ planName:", planName)
-          if (vin && planName) {
-            // Navigate to checkout with VIN and plan name
-            window.location.href = `/checkout/?vin=${encodeURIComponent(vin)}&package=${encodeURIComponent(planName)}`;
+          
+          if (planName) {
+            // Navigate to checkout with VIN (if entered) and plan name
+            if (vin) {
+              window.location.href = `/checkout/?vin=${encodeURIComponent(vin)}&package=${encodeURIComponent(planName)}`;
+            } else {
+              window.location.href = `/checkout/?vin=&package=${encodeURIComponent(planName)}`;
+            }
           }
         });
       });

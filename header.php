@@ -49,7 +49,7 @@
                     <div class="flex items-center mb-12">
                         <a class="mr-auto text-2xl font-semibold leading-none" href="#">
                             <img class="h-8"
-                                src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/logos/plain-indigo.svg"
+                                src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/logos/360Logo.svg"
                                 alt="" width="auto">
                         </a>
                         <button x-on:click="mobileNavOpen = !mobileNavOpen">
@@ -62,14 +62,14 @@
                     </div>
                     <ul>
                         <li class="mb-1"><a
-                                class="block p-4 text-sm font-semibold hover:bg-indigo-50 hover:text-indigo-500 rounded"
+                                class="block p-4 text-sm font-semibold hover:bg-indigo-50 hover:text-white rounded"
                                 onclick="scrollToSection('where-to-find-vin'); mobileNavOpen = false;">Where to Find
                                 VIN</a></li>
                         <li class="mb-1"><a
-                                class="block p-4 text-sm font-semibold hover:bg-indigo-50 hover:text-indigo-500 rounded"
+                                class="block p-4 text-sm font-semibold hover:bg-indigo-50 hover:text-white rounded"
                                 onclick="scrollToSection('pricing-section'); mobileNavOpen = false;">Pricing</a></li>
                         <li class="mb-1"><a
-                                class="block p-4 text-sm font-semibold hover:bg-indigo-50 hover:text-indigo-500 rounded"
+                                class="block p-4 text-sm font-semibold hover:bg-indigo-50 hover:text-white rounded"
                                 onclick="scrollToSection('testimonials'); mobileNavOpen = false;">Testimonials</a></li>
                     </ul>
                     <div class="mt-auto pt-6">
