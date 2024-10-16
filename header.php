@@ -9,6 +9,11 @@
     <link rel="icon" type="image/png" sizes="32x32"
         href="<?php echo get_template_directory_uri(); ?>/assets/favicon.png">
     <?php wp_head(); ?>
+    <style>
+        body {
+            padding-top: 80px; /* Adjust this value based on your header height */
+        }
+    </style>
 </head>
 
 <body <?php body_class(); ?>>

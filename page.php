@@ -7,7 +7,7 @@
             the_post();
             ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class('bg-white overflow-hidden'); ?>>
-                <div class="entry-content px-6 py-4 mt-10">
+                <div class="entry-content px-6 py-4 ">
                     <h1 class="entry-title text-4xl font-bold mb-6 text-center"><?php the_title(); ?></h1>
 
                     <div class="custom-page-content max-w-4xl mx-auto">
