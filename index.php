@@ -73,7 +73,7 @@
         <div class="flex flex-wrap -m-4">
           <div class="w-1/2 lg:w-1/4 p-4">
             <div class="bg-gray-50 rounded-lg py-12">
-              <img class="h-8 mx-auto"
+              <img class="h-8 mx-auto p-1"
                 src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/logos/clear-vin.png" alt="">
             </div>
           </div>
@@ -122,6 +122,7 @@
               </p>
             </div>
           </div>
+          <!-- 			 -->
           <div class="w-full md:w-1/3 px-4 mb-8">
             <div class="bg-white rounded-lg shadow-lg p-8 h-full transition duration-300 hover:shadow-xl">
               <div class="text-4xl text-indigo-500 mb-4">
@@ -169,6 +170,7 @@
             Example VIN Report
           </a>
         </div>
+        <!-- 		   -->
         <div class="-mb-8 lg:-mb-64">
           <div class="flex flex-wrap -mx-4 -mb-8">
             <div class="w-full lg:w-1/3 px-4 mb-8">
@@ -214,9 +216,9 @@
                     <circle cx="24" cy="24" r="23.5" stroke="currentColor"></circle>
                   </svg>
                 </span>
-                <h3 class="mb-3 text-2xl font-bold font-heading">Easy VIN Entry: Enter your VIN number effortlessly and
-                  quickly</h3>
-                <p class="text-lg text-gray-400 leading-loose">More interesting writings for your customers</p>
+                <h3 class="mb-3 text-2xl font-bold font-heading">Comprehensive Vehicle History: Get detailed reports for
+                  your VIN number</h3>
+                <p class="text-lg text-gray-400 leading-loose">Access in-depth information about the vehicle's past.</p>
               </div>
             </div>
           </div>
@@ -633,13 +635,15 @@
         </div>
         <div class="w-full lg:w-auto">
           <ul class="flex flex-wrap items-center">
-            <!-- <li class="mb-4 md:mb-0 mx-4"><a class="text-sm hover:text-indigo-700 font-medium" href="#">About</a></li> -->
-            <!-- <li class="mb-4 md:mb-0 mx-4"><a class="text-sm hover:text-indigo-700 font-medium" href="#">Company</a>
-              </li>
-              <li class="mb-4 md:mb-0 mx-4"><a class="text-sm hover:text-indigo-700 font-medium" href="#">Services</a>
-              </li>
-              <li class="mb-4 md:mb-0 mx-4"><a class="text-sm hover:text-indigo-700 font-medium"
-                  href="#">Testimonials</a></li> -->
+            <li class="mb-4 md:mb-0 mx-4"><a class="text-sm hover:text-indigo-700 font-medium"
+                href="/privacy-policy">Privacy Policy</a></li>
+            <li class="mb-4 md:mb-0 mx-4"><a class="text-sm hover:text-indigo-700 font-medium"
+                href="/terms-and-conditions">Terms and Conditions</a>
+            </li>
+            <li class="mb-4 md:mb-0 mx-4"><a class="text-sm hover:text-indigo-700 font-medium"
+                href="/contact-us">Contact Us</a>
+            </li>
+
           </ul>
         </div>
       </div>
@@ -648,7 +652,7 @@
     <div class="container px-4 mx-auto">
       <div class="flex flex-wrap justify-between items-center">
         <p class="w-full lg:w-auto mt-4 lg:mt-0 order-last lg:order-first text-sm text-gray-500">All rights reserved.
-          © 360AutoInspect.</p>
+          © Autoinspect360.</p>
         <div class="order-first lg:order-last">
           <a class="inline-block mr-8" href="#">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/plain-assets/socials/facebook.svg" alt="">
@@ -692,13 +696,13 @@
 
       // Add event listeners to plan buttons
       const planButtons = document.querySelectorAll('.plan-button');
-      
+
       planButtons.forEach(button => {
         button.addEventListener('click', function (e) {
           e.preventDefault();
           const vin = vinInput.value.trim();
           const planName = this.getAttribute('data-plan');
-          
+
           if (planName) {
             // Navigate to checkout with VIN (if entered) and plan name
             if (vin) {
@@ -711,6 +715,19 @@
       });
     });
   </script>
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/67102ed52480f5b4f58ec3e5/1iabjdt1n';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
 
 
 </body>
